@@ -8,7 +8,8 @@ const Expenses = (props) => {
   console.log(items);
   return (
     <div className="expenses">
-      {items.map((item) => <ExpenseItem title={item.title} date={item.date} amount={item.price} />)}
+      {items ? items.map((item) => <ExpenseItem title={item.title} date={item.date} amount={item.price} />) : null}
+      
     </div>
   );
 }
